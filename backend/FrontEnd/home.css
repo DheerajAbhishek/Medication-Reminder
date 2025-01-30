@@ -1,0 +1,127 @@
+header {
+    height: 124px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+
+    /* border-bottom-color: white; */
+
+}
+
+#title {
+    position: relative;
+    left: 286px;
+    font-family: ui-sans-serif;
+    top: -42px;
+    scale: 1.3;
+}
+
+#txt {
+    font-size: 59px;
+    position: relative;
+    top: 150px;
+    left: 30px;
+}
+
+#login-button {
+    height: 20px;
+    padding: 9px;
+    padding-bottom: 20px;
+    position: relative;
+    top: 60px;
+    right: 60px;
+    border-radius: 5px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+#logo {
+    transform: scale(1.4);
+    width: 75px;
+    display: block;
+    margin-left: 20px;
+    margin-right: 20px;
+    position: relative;
+    top: 30px;
+    left: 30px;
+}
+
+#mid {
+    width: 1515px;
+    height: 812px;
+    background-image: url(bg.png);
+    background-repeat: repeat-x;
+    background-size: cover;
+}
+
+/* --------------------------------------------------------------------------------------------------services */
+.details-button {
+    background-color: rgb(7, 98, 189);
+    height: 40px;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+    margin-right: 8px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.h1 {
+    margin-left: 600px;
+    margin-top: 60px;
+    color: brown;
+}
+
+
+
+
+
+.h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2rem;
+    color: #333;
+}
+
+
+.service-grid {
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+}
+
+.service-item {
+    height: 250px;
+    width: 250px;
+    text-align: left;
+}
+
+.img-infant {
+    width: 100%;
+    height: auto;
+}
+
+.button-grid {
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+}
+
+
+
+.details-button:hover {
+    background-color: #45a049;
+}

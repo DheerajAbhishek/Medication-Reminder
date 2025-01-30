@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregnancy Care Schedule</title>
+    <link rel="stylesheet" href="preg.css">
+</head>
+
+<body>
+    <header>
+        <div id="left-section">
+            <span> <img id="logo" src="Logo.jpeg">
+                <h1 id="title">MEDICATION REMINDER SYSTEM</h1>
+            </span>
+        </div>
+    </header>
+    <h1>Pregnancy Care Schedule</h1>
+    <form id="visitForm">
+        <label for="visitDate">Doctor Visit Date:</label>
+        <input type="date" id="visitDate" name="visitDate" required>
+        <label for="doctorName">Doctor Name:</label>
+        <input type="text" id="doctorName" required>
+        <button type="button" onclick="addDoctorVisit()">Add Doctor Visit</button>
+    </form>
+    <form id="vaccinationForm">
+        <label for="vaccineDate">Vaccination Date:</label>
+        <input type="date" id="vaccineDate" name="vaccineDate" required>
+        <label for="vaccineName">Vaccine:</label>
+        <input type="text" id="vaccineName" required>
+        <button type="button" onclick="addVaccination()">Add Vaccination</button>
+    </form>
+    <form id="medicineForm">
+        <label for="medicineName">Medicine Name:</label>
+        <input type="text" id="medicineName" required>
+        <label for="days">Number of Days:</label>
+        <input type="number" id="days" required>
+        <label for="slots">Slots per Day:</label>
+        <input type="number" id="slots" required>
+        <button type="button" onclick="addMedicine()">Add Medicine</button>
+    </form>
+    <form id="todoForm">
+        <label for="todoItem">To-Do Item:</label>
+        <textarea id="todoItem" required></textarea>
+        <button type="button" onclick="addTodo()">Add To-Do</button>
+    </form>
+    <div class="schedule-list" id="scheduleList"></div>
+
+
+</body>
+<script src="preg.js"></script>
+
+</html>

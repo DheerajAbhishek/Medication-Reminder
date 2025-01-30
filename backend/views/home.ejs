@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRS</title>
+    <link rel="stylesheet" href="/home.css">
+</head>
+
+<body>
+    <header>
+        <div id="left-section">
+            <span> <img id="logo" src="/Logo.jpeg">
+                <h1 id="title">MEDICATION REMINDER SYSTEM</h1>
+            </span>
+        </div>
+        <a href="/profile/<%= uid %>"><button id="login-button"><b>Profile</b>
+            </button></a>
+    </header>
+    <div id="mid">
+        <b id="txt">Busy schedule?<br>
+            Don't worry! <br>We'll remind your meds:&#41;</b>
+    </div>
+    <div class="service-grid">
+        <div class="service-item">
+            <h3>Infants</h3>
+            <img class="img-infant" src="child.png">
+        </div>
+        <div class="service-item">
+            <h3>Pregnancy</h3>
+            <img class="img-infant" src="preg.png">
+        </div>
+        <div class="service-item">
+            <h3>Oldaged</h3>
+            <img class="img-infant" src="old.png">
+        </div>
+        <div class="service-item">
+            <h3>General</h3>
+            <img class="img-infant" src="general.png">
+        </div>
+    </div>
+
+    <div class="button-grid">
+        <a href="infants.html"> <button class="details-button">Details</button></a>
+        <a href="preg.html"> <button class="details-button">Details</button></a>
+        <a href="old.html"> <button class="details-button">Details</button></a>
+        <a href="general.html"> <button class="details-button">Details</button></a>
+    </div>
+
+</body>
+
+</html>

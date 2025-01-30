@@ -1,0 +1,30 @@
+let userid = "";
+const userschema = {
+    userid: String,
+    userName: String,
+    contactNum: Number,
+    email: String,
+    category: String
+}
+const User = mongoose.model("User", userschema);
+app.set("view", "ejs");
+app.set("views", path.join(__dirname, "views"));
+app.post("/signUp", (req, res) => {
+    const { name, phone, email, category } = req.body;
+    const user = new User({ userName: name, contactNum: phone, email: email, category: category, });
+    userid = user._id
+    console.log("this is user id", userid)
+    user.save()
+        .then((data) => {
+            console.log("inserted");
+            console.log(data)
+        })
+        .then((data) => {
+            const userUpdate = User.updateOne({ _id: userid }, { $set: { userid: userid } }).then((data) => { console.log("Upadted/Added Userid ", data) })
+        })
+        .catch((e) => {
+            console.log("OOPS ERROR!! ", e)
+        })
+    res.redirect("/home.html");
+
+});
