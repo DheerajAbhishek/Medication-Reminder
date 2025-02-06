@@ -102,9 +102,11 @@ app.get('/profile/:id', async (req, res) => {
     const { id } = req.params
     console.log("Extraccted from the url", id)
     const details = await User.findOne({ userid: id });
+    const idetails = await Infant.findOne({ userid: id });
     const { userName, contactNum, email, category } = details
+    const { vaccineDate, vaccineName, medicineName, days, slots } = idetails
     console.log(details);
-    res.render("profile", { userName: userName, contactNum: contactNum, email: email, category: category })
+    res.render("profile", { userName: userName, contactNum: contactNum, email: email, category: category, vaccineDate: vaccineDate, vaccineName: vaccineName, medicineName: medicineName, days: days, slots: slots })
 
 });
 const oldschema = {
