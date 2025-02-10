@@ -20,7 +20,7 @@
     <h1>Infant Vaccination and Medicine Schedule</h1>
     <form id="vaccinationForm" method="post" action="http://localhost:3000/infant">
         <label for="vaccineDate">Vaccination Date:</label>
-        <input type="datetime-local" id="vaccineDate" name="vaccineDate" required>
+        <input type="date" id="vaccineDate" name="vaccineDate" required>
         <label for=" vaccineName">Vaccine:</label>
         <input type="text" id="vaccineName" name="vaccineName" required>
         <button id="addVacBtn" type="button">Add Vaccination</button><br>
@@ -28,6 +28,8 @@
         <input type="text" id="medicineName" name="medicineName" required>
         <label for="days">Number of Days:</label>
         <input type="number" id="days" name="days" required>
+        <label for="time">time</label>
+        <input type="time" id="time" name="time" required>
         <label for="slots">Slots per Day:</label>
         <input type="number" id="slots" name="slots" required>
         <button id="addMedBtn" type="button">Add Medicine</button>
