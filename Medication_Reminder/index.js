@@ -9,6 +9,7 @@ app.use(express.static('public'));
 
 const mongoose = require("mongoose");
 const { stringify } = require("querystring");
+const { isNull } = require("util");
 mongoose.connect('mongodb://127.0.0.1:27017/medicalDB')
     .then(() => {
         console.log("GOT CONNECTION")
@@ -102,12 +103,15 @@ app.get('/profile/:id', async (req, res) => {
     const { id } = req.params
     console.log("Extraccted from the url", id)
     const details = await User.findOne({ userid: id });
-    const idetails = await Infant.findOne({ userid: id });
     const { userName, contactNum, email, category } = details
-    const { vaccineDate, vaccineName, medicineName, days, slots } = idetails
-    console.log(details);
-    res.render("profile", { userName: userName, contactNum: contactNum, email: email, category: category, vaccineDate: vaccineDate, vaccineName: vaccineName, medicineName: medicineName, days: days, slots: slots })
-
+    const idetails = await Infant.findOne({ userid: id });
+    if (idetails === null) {
+        res.render("profile", { idetails: idetails, userName: userName, contactNum: contactNum, email: email, category: category })
+    } else {
+        const { vaccineDate, vaccineName, medicineName, days, slots } = idetails
+        console.log(details);
+        res.render("profile", { idetails: idetails, userName: userName, contactNum: contactNum, email: email, category: category, vaccineDate: vaccineDate, vaccineName: vaccineName, medicineName: medicineName, days: days, slots: slots })
+    }
 });
 const oldschema = {
     visitDate: String,
