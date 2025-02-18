@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infant Vaccination and Medicine Schedule</title>
-    <link rel="stylesheet" href="infants.css">
+    <title>General Care Schedule</title>
+    <link rel="stylesheet" href="old.css">
 </head>
 
 <body>
@@ -17,13 +17,8 @@
         </div>
 
     </header>
-    <h1>Infant Vaccination and Medicine Schedule</h1>
-    <form id="vaccinationForm" method="post" action="http://localhost:3000/infant">
-        <label for="vaccineDate">Vaccination Date:</label>
-        <input type="date" id="vaccineDate" name="vaccineDate" required>
-        <label for=" vaccineName">Vaccine:</label>
-        <input type="text" id="vaccineName" name="vaccineName" required>
-        <hr>
+    <h1>General Care Schedule</h1>
+    <form id="visitForm" method="post" action="http://localhost:3000/general">
         <label for="medicineName">Medicine Name:</label>
         <input type="text" id="medicineName" name="medicineName" required>
         <label for="days">Number of Days:</label>
@@ -33,9 +28,12 @@
         <button id="confirm" type="button">Confirm Slots</button>
 
         <hr id="hr">
-        <button type="submit">Done</button>
+        <button type="submit">Submit</button>
     </form>
+
+
+    <script src="general.js"></script>
 </body>
-<script src="infants.js"></script>
+
 
 </html>

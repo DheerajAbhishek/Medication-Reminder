@@ -18,43 +18,111 @@
         <a href="signUp.html"><button id="login-button"><b>Login/Sign Up</b>
             </button></a>
     </header>
-    <h1> here is the data of <%= userName %>
+    <h1> here is the data of <%= details.userName %>
     </h1>
     <ul>
         <li><b>Contact Number =</b>
-            <%=contactNum%>
+            <%=details.contactNum%>
         </li>
         <li> <b>Email =</b>
-            <%=email %>
-                </email>
+            <%=details.email %>
         </li>
         <li><b>category =</b>
-            <%=category%>
+            <%=details.category%>
         </li>
     </ul>
-    <% if(idetails!==null) {%>
-        <h1>Data of medication(infant)</h1>
+    <% if(idetails) {%>
+        <h2>Data of medication(infant)</h2>
         <ul>
             <li><b>Vaccine Date=</b>
-                <%=vaccineDate%>
+                <%=idetails.vaccineDate%>
             </li>
             <li> <b>Vaccine Name =</b>
-                <%=vaccineName %>
+                <%=idetails.vaccineName %>
                     </email>
             </li>
             <li><b>Medicine Name =</b>
-                <%=medicineName%>
+                <%=idetails.medicineName%>
             </li>
             <li>
                 <b>Days =</b>
-                <%=days%>
+                <%=idetails.days%>
             </li>
             <li>
                 <b>Slots =</b>
-                <%=slots%>
+                <%=idetails.slots%>
             </li>
         </ul>
         <%} %>
+
+            <% if(odetails) {%>
+                <h2>Data of medication(Oldaged)</h2>
+                <ul>
+                    <li><b>Visit Date=</b>
+                        <%=odetails.visitDate%>
+                    </li>
+                    <li> <b>Doctor Name=</b>
+                        <%=odetails.doctorName %>
+
+                    </li>
+                    <li><b>Medicine Name =</b>
+                        <%=odetails.medicineName%>
+                    </li>
+                    <li>
+                        <b>Days =</b>
+                        <%=odetails.days%>
+                    </li>
+                    <li>
+                        <b>Slots =</b>
+                        <%=odetails.slots%>
+                    </li>
+                </ul>
+                <%} %>
+
+                    <% if(pdetails) {%>
+                        <h2>Data of medication(Pregnancy)</h2>
+                        <ul>
+                            <li><b>Vaccine Date=</b>
+                                <%=pdetails.vaccineDate%>
+                            </li>
+                            <li> <b>Vaccine Name =</b>
+                                <%=pdetails.vaccineName %>
+                                    </email>
+                            </li>
+                            <li> <b>Doctor Name=</b>
+                                <%=pdetails.doctorName %>
+
+                            </li>
+                            <li><b>Medicine Name =</b>
+                                <%=pdetails.medicineName%>
+                            </li>
+                            <li>
+                                <b>Days =</b>
+                                <%=pdetails.days%>
+                            </li>
+                            <li>
+                                <b>Slots =</b>
+                                <%=pdetails.slots%>
+                            </li>
+                        </ul>
+                        <%} %>
+                            <% if(gdetails) {%>
+                                <h2>Data of medication(General)</h2>
+                                <ul>
+
+                                    <li><b>Medicine Name =</b>
+                                        <%=gdetails.medicineName%>
+                                    </li>
+                                    <li>
+                                        <b>Days =</b>
+                                        <%=gdetails.days%>
+                                    </li>
+                                    <li>
+                                        <b>Slots =</b>
+                                        <%=gdetails.slots%>
+                                    </li>
+                                </ul>
+                                <%} %>
 </body>
 
 </html>

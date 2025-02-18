@@ -17,35 +17,35 @@
         </div>
     </header>
     <h1>Pregnancy Care Schedule</h1>
-    <form id="visitForm">
+    <form id="visitForm" method="post" action="http://localhost:3000/preg">
         <label for="visitDate">Doctor Visit Date:</label>
         <input type="date" id="visitDate" name="visitDate" required>
         <label for="doctorName">Doctor Name:</label>
-        <input type="text" id="doctorName" required>
-        <button type="button" onclick="addDoctorVisit()">Add Doctor Visit</button>
-    </form>
-    <form id="vaccinationForm">
+        <input type="text" id="doctorName" name="doctorName" required>
+
+        <hr>
+
         <label for="vaccineDate">Vaccination Date:</label>
         <input type="date" id="vaccineDate" name="vaccineDate" required>
         <label for="vaccineName">Vaccine:</label>
-        <input type="text" id="vaccineName" required>
-        <button type="button" onclick="addVaccination()">Add Vaccination</button>
-    </form>
-    <form id="medicineForm">
+        <input type="text" id="vaccineName" name="vaccineName" required>
+
+        <hr>
+
         <label for="medicineName">Medicine Name:</label>
-        <input type="text" id="medicineName" required>
+        <input type="text" id="medicineName" name="medicineName" required>
         <label for="days">Number of Days:</label>
-        <input type="number" id="days" required>
+        <input type="number" id="days" name="days" required>
         <label for="slots">Slots per Day:</label>
-        <input type="number" id="slots" required>
-        <button type="button" onclick="addMedicine()">Add Medicine</button>
+        <input type="number" id="slots" name="slots" required>
+        <button id="confirm" type="button">Confirm Slots</button>
+
+        <hr id="hr">
+        <label for="todo">To-Do Item:</label>
+        <textarea id="todo" name="todo" required></textarea>
+        <button type="submit">SUMBIT</button>
     </form>
-    <form id="todoForm">
-        <label for="todoItem">To-Do Item:</label>
-        <textarea id="todoItem" required></textarea>
-        <button type="button" onclick="addTodo()">Add To-Do</button>
-    </form>
-    <div class="schedule-list" id="scheduleList"></div>
+
 
 
 </body>
