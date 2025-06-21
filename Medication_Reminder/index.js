@@ -196,7 +196,7 @@ app.post("/infant", (req, res) => {
             service: "gmail",
             auth: {
                 user: "medicationreminder.notification@gmail.com",
-                pass: "jeoi mqni tvea bphe" // App Password
+                pass: "vqlm kfxy wpsi czue" // App Password
             }
         });
 
